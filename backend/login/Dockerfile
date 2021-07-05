@@ -5,11 +5,12 @@ WORKDIR /usr/src/app
 
 
 ENV WEBPORT 80
-ENV USERSAPIHOST arcadia-users
-ENV LOGINAPIHOST arcadia-login
-ENV CASHTAPIHOST arcadia-cash-transfer
-ENV STOCKTAPIHOST arcadia-stock-transfer
-ENV STOCKSAPIHOST arcadia-stocks
+ENV NAMESPACE default
+ENV USERSAPIHOST arcadia-users.$NAMESPACE
+ENV LOGINAPIHOST arcadia-login.$NAMESPACE
+ENV CASHTAPIHOST arcadia-cash-transfer.$NAMESPACE
+ENV STOCKTAPIHOST arcadia-stock-transfer.$NAMESPACE
+ENV STOCKSAPIHOST arcadia-stocks.$NAMESPACE
 
 
 # Install app dependencies
